@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E90FF; /* Azul principal */
+            color: white;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff10; /* Fondo translúcido */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 20px;
+        }
+        #timer {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>El contador finalizará en:</h1>
+        <div id="timer">20</div>
+        <p>Gracias por tu paciencia.</p>
+    </div>
+
+    <script>
+        let timerElement = document.getElementById('timer');
+        let seconds = 20;
+
+        const countdown = setInterval(() => {
+            seconds--;
+            timerElement.textContent = seconds;
+
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                document.body.innerHTML = `
+                    <div class="container">
+                        <h1>¡Gracias por ayudar al creador!</h1>
+                        <p>Redirigiéndote ahora...</p>
+                    </div>
+                `;
+                setTimeout(() => {
+                    window.location.href = "https://streamhg-pro.blogspot.com"; // Reemplaza con tu URL
+                }, 3000); // Redirige después de 3 segundos
+            }
+        }, 1000);
+    </script>
+    <script src="https://alwingulla.com/88/tag.min.js" data-zone="125474" async data-cfasync="false"></script>
+</body>
+</html>
