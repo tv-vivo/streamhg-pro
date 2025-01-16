@@ -6,8 +6,8 @@
             <AdTitle>intro </AdTitle>
             <Creatives>
                 <Creative id="2" sequence="1">
-                    <Linear skipoffset="00:00:04">
-                        <Duration>00:00:11</Duration>
+                    <Linear skipoffset="00:00:03">
+                        <Duration>00:00:03</Duration>
                         <VideoClicks>
                             <ClickThrough id="blog"><![CDATA[https://streamhg-pro.blogspot.com/]]></ClickThrough>
                             <CustomClick>https://streamhg-pro.blogspot.com/</CustomClick>
